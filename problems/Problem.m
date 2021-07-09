@@ -392,13 +392,14 @@ classdef (Abstract) Problem < handle
 
             solidModel = obj.solidModel();
 
-            if ~obj.runningOnConsole_
+            %if ~obj.runningOnConsole_
 
+                suffix = strcat('-', string(solidModel.problem().runTime().timeIndex()));
                 obj.meshDrawer().run(...
                     solidModel.volU(), solidModel.volGradU());
                 obj.setCamera();
                 drawnow;
-            end
+            %end
 
             printHeader();
 
@@ -412,11 +413,11 @@ classdef (Abstract) Problem < handle
 
                 obj.solidModelHasEvolved();
 
-                if ~obj.runningOnConsole_
-
+                %if ~obj.runningOnConsole_
+                    suffix = strcat('-', string(solidModel.problem().runTime().timeIndex()));
                     obj.meshDrawer().run(...
                         solidModel.volU(), solidModel.volGradU());
-                end
+                %end
             end
 
             printFooter();

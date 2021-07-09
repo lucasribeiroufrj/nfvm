@@ -28,7 +28,7 @@ params.logFilename = [mfilename, '.log' ];
 % 3 - {'unitCube3x3'}
 % 4 - {'unitCube64x64'}
 % 5 - {'unitCube8x8'}
-params.meshIdx = 4;
+params.meshIdx = 5;
 
 problem = caseRunner(params);
 

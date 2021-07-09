@@ -111,6 +111,7 @@ classdef MeshDrawer < handle
             %   changes. But if the volume displacement gradiend volUGrad
             %   is also passed then the mesh will use this field to draw
             % the deformed mesh.
+            %disp(suffix);
             
             if nargin == 3
                 vertices = obj.displacedVertices(volPhi, volUGrad);
@@ -119,7 +120,7 @@ classdef MeshDrawer < handle
             end
             
             if isempty(obj.figHandle_)
-                obj.figHandle_ = figure(999);
+                obj.figHandle_ = figure('Visible','off');
                 clf(obj.figHandle_);
                 set...
                 (...
@@ -135,7 +136,7 @@ classdef MeshDrawer < handle
                 delete(obj.patch_)
             end
             
-            figure(obj.figHandle_);
+            %figure(obj.figHandle_);
             
             obj.patch_ = ...
                 patch...
@@ -161,6 +162,9 @@ classdef MeshDrawer < handle
 
             grid on
             drawnow
+            
+            suffix = datestr(now);
+            print(obj.figHandle_,'-dpng',strcat('mesh', suffix, '.png'));
         end
     end
     
