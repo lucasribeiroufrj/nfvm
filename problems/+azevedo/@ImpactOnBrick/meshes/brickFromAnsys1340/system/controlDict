@@ -1,0 +1,66 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | foam-extend: Open Source CFD                    |
+|  \\    /   O peration     | Version:     3.0                                |
+|   \\  /    A nd           | Web:         http://www.extend-project.de       |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      controlDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+application     solids4Foam;
+
+startFrom       startTime;
+
+startTime       0;
+
+stopAt          endTime;
+
+endTime         1e-2;
+
+deltaT          2e-5;
+
+writeControl    timeStep;
+
+writeInterval   1;//16; 
+
+cycleWrite      0;
+
+writeFormat     ascii;
+
+writePrecision  6;
+
+writeCompression uncompressed;
+
+timeFormat      general;
+
+timePrecision   6;
+
+runTimeModifiable no;
+/*
+functions
+{
+    forceDisp1
+    {
+        type          solidForcesDisplacements;
+        historyPatch  fsiInterface;
+    }
+    forceDisp2
+    {
+        type          solidForcesDisplacements;
+        historyPatch  ground_brick;
+    }
+}
+*/
+libs
+(
+    /*"libhyperfoam.so",*/ "/work/azevedo/foam/azevedo-4.0/lib/linux64GccDPOpt/cardiff/libblazKo.so"
+);
+
+// ************************************************************************* //

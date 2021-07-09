@@ -1,0 +1,68 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | foam-extend: Open Source CFD                    |
+|  \\    /   O peration     | Version:     4.0                                |
+|   \\  /    A nd           | Web:         http://www.foam-extend.org         |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant/polyMesh";
+    object      meshMetaDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+surfaceFile     "models/brick/brick.stl";
+
+surfaceMeta
+{
+    nPoints         8;
+    nFacets         696;
+    nPatches        6;
+    nFeatureEdges   0;
+    patches
+    {
+        backSymmetry
+        {
+            type            patch;
+            nFacets         116;
+        }
+        bottom
+        {
+            type            patch;
+            nFacets         116;
+        }
+        front
+        {
+            type            patch;
+            nFacets         116;
+        }
+        leftSymmetry
+        {
+            type            patch;
+            nFacets         116;
+        }
+        rightWall
+        {
+            type            patch;
+            nFacets         116;
+        }
+        topContact
+        {
+            type            patch;
+            nFacets         116;
+        }
+    }
+    pointSubsets
+    {
+    }
+    facetSubsets
+    {
+    }
+    featureEdgeSubsets
+    {
+    }
+}

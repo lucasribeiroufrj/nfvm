@@ -1,0 +1,11 @@
+# Ignore temporary files
+*.*~
+CsnData.mat
+log.*
+thirdParty/MATAMG/bin/*.mexmaci64
+thirdParty/MATAMG/bin/amgpath.m
+test.sh
+continuumMechanics.m
+*.log
+
+!log.m

@@ -1,0 +1,4 @@
+Running blockMesh on /work/azevedo/foam/foam-4.0/testeCases/hyperfoam/compareWith_nFVM/SegShear2dNH0_45sfDisp1ts500corr64x64S4F
+Running solidModel nonLinearGeometryTotalLagrangianTotalDisplacement
+Running solids4Foam on /work/azevedo/foam/foam-4.0/testeCases/hyperfoam/compareWith_nFVM/SegShear2dNH0_45sfDisp1ts500corr64x64S4F
+/work/azevedo/foam/foam-extend-4.0/bin/tools/RunFunctions: line 37: 18019 Floating point exception(core dumped) $APP_RUN $* > $LOG_NAME 2>&1
